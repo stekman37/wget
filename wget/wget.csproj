@@ -55,10 +55,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\DownLoader.cs" />
-    <Compile Include="Domain\PageParser.cs" />
-    <Compile Include="Domain\ProgressReporter.cs" />
-    <Compile Include="Domain\SpiderManager.cs" />
+    <Compile Include="SiteDownloader\FileDownLoader.cs" />
+    <Compile Include="SiteDownloader\PageParser.cs" />
+    <Compile Include="SiteDownloader\DownloadCommander.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

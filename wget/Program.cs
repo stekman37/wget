@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using wget.Domain;
+using wget.SiteDownloader;
 
 namespace wget
 {
@@ -11,11 +11,10 @@ namespace wget
     {
         static void Main(string[] args)
         {
-            var path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/test/";
-            var start = @"http://www.vergic.com/";
-            var spiderManager = new SpiderManager();
-            spiderManager.Crawl(start, path);
-            Console.ReadLine();
+            var target = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "/test/";
+            var startUrl = @"http://www.vergic.com/";
+            var downloadCommander = new DownloadCommander();
+            downloadCommander.StartCrawl(startUrl, target);
         }
     }
 }
